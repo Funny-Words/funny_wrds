@@ -15,7 +15,7 @@ module FW
         end
 
         def get_concatenated_words()
-            @words.as_a.sample + @words.as_a.sample
+            "#{@words.as_a.sample}#{@words.as_a.sample}"
         end
     end
 end
