@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      funny_wrds:
-       github: your-github-user/funny_wrds
+       github: UberNihilist/funny_wrds
    ```
 
 2. Run `shards install`
