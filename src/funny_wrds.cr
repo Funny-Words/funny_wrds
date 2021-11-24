@@ -1,8 +1,8 @@
 require "json"
 
 class FunnyWords
-	@words          : JSON::Any
-    @path_to_words  : String
+	@words                      : JSON::Any
+    property path_to_words      : String
 
     def initialize(@path_to_words)
     	@words = File.open(@path_to_words) { |file| JSON.parse(file) }
@@ -10,6 +10,10 @@ class FunnyWords
 
     def get_words(n = 1)
         @words.as_a.sample(n)
+    end
+
+    def get_concatenated_words()
+        @words.as_a.sample + @words.as_a.sample
     end
 
 end
