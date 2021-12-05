@@ -1,8 +1,11 @@
 require "json"
 
 class FunnyWords
-  def open_file(path_to_file)
+  def initialize()
     @file : JSON::Any
+  end
+
+  def open_file(path_to_file)
     @file = File.open(path_to_file) { |file| JSON.parse(file) }
     self
   end
