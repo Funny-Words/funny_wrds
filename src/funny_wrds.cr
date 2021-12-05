@@ -2,6 +2,7 @@ require "json"
 
 class FunnyWords
   def open_file(path_to_file)
+    @file : JSON::Any
     @file = File.open(path_to_file) { |file| JSON.parse(file) }
     self
   end
