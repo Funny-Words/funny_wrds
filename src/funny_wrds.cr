@@ -1,8 +1,6 @@
 require "json"
 
 class FunnyWords
-  @file = 0
-
   def open_file(path_to_file)
     @file = File.open(path_to_file) { |file| JSON.parse(file) }
     self
