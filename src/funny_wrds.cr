@@ -1,7 +1,7 @@
 require "json"
 
 class FunnyWords
-	property path		: String
+	getter path		  : String
 	property file 	: JSON::Any
 
   def initialize(@path)
