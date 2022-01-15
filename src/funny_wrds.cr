@@ -13,6 +13,6 @@ class FunnyWords
   end
 
   def get_concatenated_words
-    "#{@file.as_a.sample}#{@file.as_a.sample}"
+    "#{@file.as_a.sample} #{@file.as_a.sample}"
   end
 end
