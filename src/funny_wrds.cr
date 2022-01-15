@@ -8,7 +8,7 @@ class FunnyWords
     @file = File.open(@path) { |file| JSON.parse(file) }
   end
 
-  def get_words(n = 1)
+  def get_words(n : Int32 = 1)
     @file.as_a.sample(n)
   end
 
