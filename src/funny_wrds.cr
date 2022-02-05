@@ -1,18 +1,18 @@
 require "json"
 
 class FunnyWords
-	getter path		  : String
-	property file 	: JSON::Any
+	getter path	 : String
+	@file 	     : Array(JSON::Any)
 
   def initialize(@path)
-    @file = File.open(@path) { |file| JSON.parse(file) }
+    @file = File.open(@path) { |file| JSON.parse(file) }.as_a
   end
 
   def get_words(n : Int32 = 1)
-    @file.as_a.sample(n)
+    @file.sample(n)
   end
 
   def get_concatenated_words
-    "#{@file.as_a.sample} #{@file.as_a.sample}"
+    "#{@file.sample} #{@file.sample}"
   end
 end
