@@ -14,7 +14,11 @@ class FunnyWords
     @file.sample(n).join(", ")
   end
 
-  def get_concatenated_words
+  def get_cword
     @file.sample(2).join(", ")
+  end
+
+  def get_arr
+    @file
   end
 end
